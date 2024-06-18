@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 12</title>
+  <style>
+    body {
+      margin-left: auto;
+      margin-right: auto;
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+    }
+    .parent {
+      border: 2px solid black;
+      background-color: rgb(171, 7, 171);
+      display: inline-block;
+      padding: 80px; 
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 10px; 
+      width: 80%;
+      max-width: 700px; 
+    }
+    .child {
+      background-color: purple;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.2);
+    }
+    .child form {
+      margin: 0; /* Remove default form margin */
+    }
+    .child label {
+      display: inline-block;
+      width: 140px;
+      font-weight: bold;
+      color: white;
+      margin-bottom: 5px; /* Added margin bottom */
+    }
+    .child input, .child select {
+      width: calc(100% - 160px); /* Adjusted width for inputs */
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      box-sizing: border-box;
+    }
+    .child input[type="radio"], .child input[type="checkbox"] {
+      width: auto;
+      margin-right: 5px;
+    }
+    .savebutton {
+      width: 100%;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .savebutton:hover {
+      background-color: #45a049;
+    }
+    /* Styling for select dropdown */
+    #language {
+      background-color: #c8c8db; /* Different background color */
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      width: calc(50% - 140px); /* Adjusted width */
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+  <div class="parent">
+    <div class="child">
+      <form action="submit.php" method="POST">
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="fullname" placeholder="Enter Name" required><br>
+        
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" placeholder="Enter Valid Username" required><br>
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br>
+        
+        <label for="phonenumber">Phone Number:</label>
+        <input type="tel" id="phonenumber" name="phonenumber" required><br>
+        
+        <label style="vertical-align: top;">Gender:</label>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+        <input type="radio" id="other" name="gender" value="other">
+        <label for="other">Other</label><br>
+        
+        <label for="language">Language:</label>
+        <select id="language" name="language"  required>
+          <option value="">Select language</option>
+          <option value="English">English</option>
+          <option value="Tamil">Tamil</option>
+          <option value="Korean">Korean</option>
+          <option value="Japanese">Japanese</option>
+        </select><br>
+
+        <label for="Zip Code">Zip Code:</label>
+        <input type="number" id="Zip Codde" name="Zip Code"  required><br>
+        
+        <label for="About">About:</label>
+        <input type="text" id="About" name="About" placeholder="Write about yourself..." required><br><br>
+        
+        
+        <button type="submit" class="savebutton">Register</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
